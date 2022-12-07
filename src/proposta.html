@@ -66,7 +66,7 @@
           </p>
 
           <!-- BOOTSTRAP CAROUSEL COMPONENT -->
-          <div id="carouselBand" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel slide" id="carouselBand" data-bs-ride="carousel">
               <div class="carousel-inner">
                   <div class="carousel-item active">
                     <picture class="foto-interna d-block w-100">
@@ -88,12 +88,12 @@
                   </div>
               </div>
 
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselBand" data-bs-slide="prev">
+              <button class="carousel-control-prev" data-bs-target="#carouselBand" data-bs-slide="prev" type="button">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
               </button>
 
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselBand" data-bs-slide="next">
+              <button class="carousel-control-next" data-bs-target="#carouselBand" data-bs-slide="next" type="button">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
               </button>
@@ -176,6 +176,6 @@
 
       <include src="./views/footer.html"></include>
 
-      <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+      <script src="./assets/scripts/main.js" type="module"></script><!-- do not remove this line! -->
     </body>
   </html>
