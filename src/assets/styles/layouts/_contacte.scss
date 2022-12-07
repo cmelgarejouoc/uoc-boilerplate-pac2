@@ -2,79 +2,79 @@
   #CONTACTE-STYLES
 \*------------------------------------*/
 
-.contacte-title-section {
-  // Box model
-  padding-top: 3rem;
-  padding-right: 2.3rem;
-  padding-bottom: 1rem;
-  padding-left: 2.3rem;
-
-  // Typography
-  font-size: 3.2rem;
-  font-weight: 700;
-  color: #FFA34F;
-  text-align: left;
-}
-
-
-
-.contacte-form-wrapper {
-  // Box model
-  max-width: 800px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-}
-
-.form-content {
-  // Box model
-  width: 100%;
-  padding-top: 1rem;
-  padding-right: 2.3rem;
-  padding-bottom: 1rem;
-  padding-left: 2.3rem;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.form-label {
-  // Box model
-  width: 100%;
-}
-
-.form-label,
-.form-control {
-  // Typography
-  font-size: 1.6rem;
-}
-
-
-.email-info {
-  // Typography
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-
-
-.contacte-image {
-  // Box model
-  width: 100%;
-  max-width: 760px;
-  height: 36rem;
-  margin-right: auto;
-  margin-left: auto;
-
-  // Visual
-  object-fit: cover;
-
-  @media screen and (min-width: 768px) {
+  .contacte-title-section {
     // Box model
-    width: 76rem;
-    height: auto;
+    padding-top: 3rem;
+    padding-right: 2.3rem;
+    padding-bottom: 1rem;
+    padding-left: 2.3rem;
+
+    // Typography
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #FFA34F;
+    text-align: left;
+  }
+
+
+
+  .contacte-form-wrapper {
+    // Box model
+    max-width: 800px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+
+  .form-content {
+    // Box model
+    width: 100%;
+    padding-top: 1rem;
+    padding-right: 2.3rem;
+    padding-bottom: 1rem;
+    padding-left: 2.3rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .form-label {
+    // Box model
+    width: 100%;
+  }
+
+  .form-label,
+  .form-control {
+    // Typography
+    font-size: 1.6rem;
+  }
+
+
+  .email-info {
+    // Typography
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+
+
+  .contacte-image {
+    // Box model
+    width: 100%;
+    max-width: 760px;
+    height: 36rem;
+    margin-right: auto;
+    margin-left: auto;
 
     // Visual
-    object-fit: inherit;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      width: 76rem;
+      height: auto;
+
+      // Visual
+      object-fit: inherit;
+    }
   }
-}

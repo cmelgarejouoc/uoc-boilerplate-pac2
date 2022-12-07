@@ -4,121 +4,121 @@
   #MEMBRES-STYLES
 \*------------------------------------*/
 
-.members-main {
-  // Box model
-  max-width: 1440px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-}
-
-.members-title-section {
-  // Box model
-  padding-top: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 1rem;
-  padding-left: 3rem;
-  margin-bottom: 1rem;
-
-  // Typography
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: map.get($theme-colors, "other-color");
-  text-align: center;
-}
-
-
-.members-wrapper {
-  // Box model
-  display: block;
-  padding-right: 3rem;
-  padding-left: 3rem;
-
-  @media screen and (min-width: 768px) {
+  .members-main {
     // Box model
-    padding-right: 1.8rem;
-    padding-left: 1.8rem;
+    max-width: 1440px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
   }
-}
 
-
-.member {
-  // Typography
-  text-align: center;
-
-  @media screen and (min-width: 768px) {
+  .members-title-section {
     // Box model
-    float: left;
-    width: 33.33%;
-    padding-right: 1.2rem;
-    padding-left: 1.2rem;
-  }
-}
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
 
-.member-picture {
-  // Box model
-  margin-bottom: 2rem;
-}
-
-.member-name {
-  // Box model
-  margin-bottom: .5rem;
-
-  // Typography
-  font-size: 2rem;
-  font-weight: 600;
-  color: map.get($theme-colors, "secondary-color");
-}
-
-.member-instrument {
-  // Typography
-  font-size: 1.2rem;
-  color: map.get($theme-colors, "secondary-color");
-}
-
-.member-bio {
-  // Box model
-  max-width: 47rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  margin-left: auto;
-
-  // Typography
-  font-size: 1.6rem;
-}
-
-
-.btn-primary {
-  // Box model
-  margin-bottom: 5rem;
-
-  // Typography
-  font-size: 2rem;
-  font-weight: 600;
-  color: map.get($theme-colors, "site-invert");
-
-  &:hover {
     // Typography
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: map.get($theme-colors, "other-color");
+    text-align: center;
+  }
+
+
+  .members-wrapper {
+    // Box model
+    display: block;
+    padding-right: 3rem;
+    padding-left: 3rem;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      padding-right: 1.8rem;
+      padding-left: 1.8rem;
+    }
+  }
+
+
+  .member {
+    // Typography
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      float: left;
+      width: 33.33%;
+      padding-right: 1.2rem;
+      padding-left: 1.2rem;
+    }
+  }
+
+  .member-picture {
+    // Box model
+    margin-bottom: 2rem;
+  }
+
+  .member-name {
+    // Box model
+    margin-bottom: .5rem;
+
+    // Typography
+    font-size: 2rem;
+    font-weight: 600;
+    color: map.get($theme-colors, "secondary-color");
+  }
+
+  .member-instrument {
+    // Typography
+    font-size: 1.2rem;
+    color: map.get($theme-colors, "secondary-color");
+  }
+
+  .member-bio {
+    // Box model
+    max-width: 47rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: auto;
+
+    // Typography
+    font-size: 1.6rem;
+  }
+
+
+  .btn-primary {
+    // Box model
+    margin-bottom: 5rem;
+
+    // Typography
+    font-size: 2rem;
+    font-weight: 600;
     color: map.get($theme-colors, "site-invert");
 
-    // Visual
-    opacity: .7;
+    &:hover {
+      // Typography
+      color: map.get($theme-colors, "site-invert");
+
+      // Visual
+      opacity: .7;
+    }
   }
-}
 
 
 
-.members-pre-footer {
-  @media screen and (min-width: 768px) {
-    // Box model
-    width: 96%;
-    clear: both;
+  .members-pre-footer {
+    @media screen and (min-width: 768px) {
+      // Box model
+      width: 96%;
+      clear: both;
+    }
   }
-}
 
 
 
@@ -128,29 +128,29 @@
   #FLEX & GRID SUPPORT
 \*------------------------------------*/
 
-/* FLEX SUPPORTED */
-@supports (display: flex) {
-  .members-wrapper {
-    // Box model
-    display: flex;
-    flex-direction: column;
-
-    @media screen and (min-width: 768px) {
+  /* FLEX SUPPORTED */
+  @supports (display: flex) {
+    .members-wrapper {
       // Box model
-      flex-direction: row;
-      column-gap: 2rem;
-      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 768px) {
+        // Box model
+        flex-direction: row;
+        column-gap: 2rem;
+        justify-content: space-between;
+      }
+    }
+
+
+    .member {
+      @media screen and (min-width: 768px) {
+        // Box model
+        float: none;
+        width: auto;
+        padding-right: initial;
+        padding-left: initial;
+      }
     }
   }
-
-
-  .member {
-    @media screen and (min-width: 768px) {
-      // Box model
-      float: none;
-      width: auto;
-      padding-right: initial;
-      padding-left: initial;
-    }
-  }
-}
