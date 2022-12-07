@@ -80,7 +80,7 @@ window.addEventListener("resize", windowResizeListener);
  * aplico l'estil active en la pàgina en la que estem amb Vanilla JS
  */
 
-let url = new URL(window.location.href);
+const url = new URL(window.location.href);
 const page = url.pathname.split("/").pop();
 
 switch (page) {
