@@ -132,6 +132,7 @@
     height: auto;
   }
 
+
   p,
   li,
   cite {
@@ -159,6 +160,7 @@
     font-style: initial;
   }
 
+
   blockquote {
     // Box model
     margin-bottom: 2.4rem;
@@ -166,6 +168,8 @@
     // Typography
     font-size: 2.4rem;
   }
+
+
 
   main {
     clear: both;
@@ -436,6 +440,7 @@
     }
   }
 
+
   .header-menu-home-link {
     @media screen and (min-width: 768px) {
       // Box model
@@ -481,6 +486,7 @@
     }
   }
 
+
   .header-content-wrapper {
     @media screen and (min-width: 768px) {
       // Box model
@@ -497,6 +503,7 @@
       height: 7rem;
     }
   }
+
 
   .logo-wrapper {
     // Box model
@@ -753,6 +760,7 @@
   }
 
 
+
   /**
     * Com que l'icona de Linkedin i del correu apareixen tant al menú
     * com al footer ho poso aquí, com a definició més genèrica.
@@ -844,6 +852,7 @@
       }
     }
 
+
     .header-content-wrapper {
       @media screen and (min-width: 768px) {
         // Box model
@@ -852,11 +861,14 @@
       }
     }
 
+
     .logo-wrapper,
     .hamburger-menu {
       // Box model
       float: none;
     }
+
+
 
     .site-footer-logo {
       @media screen and (min-width: 768px) {
@@ -909,10 +921,12 @@
       }
     }
 
+
     .social-media-list-item {
       // Box model
       display: initial;
     }
+
 
     .site-footer-social-media {
       @media screen and (min-width: 768px) {

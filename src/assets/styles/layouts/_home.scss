@@ -147,7 +147,6 @@
   text-align: center;
 }
 
-
 .home-etiqueta-data {
   // Positioning
   position: absolute;
@@ -281,6 +280,7 @@
     }
   }
 
+
   .home-more-info-line {
     @media screen and (min-width: 768px) {
       // Box model
@@ -307,6 +307,8 @@
     }
   }
 
+
+
   .home-picture {
     @media screen and (min-width: 768px) {
       // Box model
@@ -325,6 +327,8 @@
       object-fit: cover;
     }
   }
+
+
 
   .home-etiqueta-properes {
     @media screen and (min-width: 768px) {

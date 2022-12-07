@@ -2,16 +2,6 @@
   #CONTACTE-STYLES
 \*------------------------------------*/
 
-.contacte-form-wrapper {
-  // Box model
-  max-width: 800px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-}
-
-
 .contacte-title-section {
   // Box model
   padding-top: 3rem;
@@ -26,6 +16,16 @@
   text-align: left;
 }
 
+
+
+.contacte-form-wrapper {
+  // Box model
+  max-width: 800px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+}
 
 .form-content {
   // Box model
@@ -55,6 +55,7 @@
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 
 
 .contacte-image {

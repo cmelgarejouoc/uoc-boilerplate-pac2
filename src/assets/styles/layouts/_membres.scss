@@ -29,6 +29,7 @@
   text-align: center;
 }
 
+
 .members-wrapper {
   // Box model
   display: block;
@@ -41,6 +42,7 @@
     padding-left: 1.8rem;
   }
 }
+
 
 .member {
   // Typography
@@ -89,6 +91,7 @@
   font-size: 1.6rem;
 }
 
+
 .btn-primary {
   // Box model
   margin-bottom: 5rem;
@@ -106,6 +109,8 @@
     opacity: .7;
   }
 }
+
+
 
 .members-pre-footer {
   @media screen and (min-width: 768px) {
@@ -130,7 +135,6 @@
     display: flex;
     flex-direction: column;
 
-
     @media screen and (min-width: 768px) {
       // Box model
       flex-direction: row;
@@ -138,6 +142,7 @@
       justify-content: space-between;
     }
   }
+
 
   .member {
     @media screen and (min-width: 768px) {
