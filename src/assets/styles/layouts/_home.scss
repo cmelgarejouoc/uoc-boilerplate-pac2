@@ -58,7 +58,10 @@
 
 .home-title-section {
   // Box model
-  padding: 3rem 2.3rem 1rem 2.3rem;
+  padding-top: 3rem;
+  padding-right: 2.3rem;
+  padding-bottom: 1rem;
+  padding-left: 2.3rem;
 
   // Typography
   font-size: 3.2rem;
@@ -70,7 +73,10 @@
 
 .home-subtitle-section {
   // Box model
-  padding: 0 2.3rem 0 2.3rem;
+  padding-top: 0;
+  padding-right: 2.3rem;
+  padding-bottom: 0;
+  padding-left: 2.3rem;
   margin-bottom: .8rem;
 
   // Typography
@@ -80,7 +86,10 @@
 
 .home-poster-text {
   // Box model
-  padding: 0 2.3rem 0 2.3rem;
+  padding-top: 0;
+  padding-right: 2.3rem;
+  padding-bottom: 0;
+  padding-left: 2.3rem;
   margin-bottom: .8rem;
 
   // Typography
@@ -91,7 +100,10 @@
 .home-more-info-line {
   // Box model
   width: 2.9rem;
-  margin: 0 0 .3rem 2.3rem;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: .3rem;
+  margin-left: 2.3rem;
 
   // Visual
   border-top: 3px solid map.get($theme-colors, "secondary-color");
@@ -101,7 +113,10 @@
 .home-more-info {
   // Box model
   display: block;
-  padding: 0 2.3rem 0 2.3rem;
+  padding-top: 0;
+  padding-right: 2.3rem;
+  padding-bottom: 0;
+  padding-left: 2.3rem;
   margin-bottom: 3rem;
 
   // Typography
@@ -154,6 +169,8 @@
   color: map.get($theme-colors, "main-color");
   text-align: center;
 }
+
+
 
 
 
@@ -223,7 +240,10 @@
       // Box model
       grid-row: 1 / -1;
       grid-column: 6 / 7;
-      padding: 0;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
       margin-top: 1rem;
       writing-mode: vertical-rl;
     }

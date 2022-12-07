@@ -15,7 +15,10 @@
 
   // Box model
   width: 100%;
-  padding: 3rem 3.3rem 1rem;
+  padding-top: 3rem;
+  padding-right: 3.3rem;
+  padding-bottom: 1rem;
+  padding-left: 3.3rem;
 
   // Typography
   font-size: 3.2rem;
@@ -31,7 +34,10 @@
 
     // Box model
     width: 40rem;
-    padding: 5rem 2rem 5rem 3.3rem;
+    padding-top: 5rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+    padding-left: 3.3rem;
     margin-right: 2rem;
     margin-left: auto;
 
@@ -42,7 +48,10 @@
   @media screen and (min-width: 1440px) {
     // Box model
     width: 46rem;
-    padding: 6rem 2rem 5rem 3.3rem;
+    padding-top: 6rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
+    padding-left: 3.3rem;
 
     // Typography
     font-size: 4.2rem;
@@ -158,7 +167,10 @@
 .list-group-numbered > .list-group-item::before {
   // Box model
   width: 3rem;
-  padding: .4rem 2rem .4rem 1.2rem;
+  padding-top: .4rem;
+  padding-right: 2rem;
+  padding-bottom: .4rem;
+  padding-left: 1.2rem;
   margin-right: 2rem;
 
   // Typography
@@ -168,7 +180,10 @@
 
   // Visual
   border: 1px solid #979696;
-  border-radius: 2rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
 
   @media screen and (min-width: 768px) {
     // Box model
@@ -183,6 +198,8 @@
     width: 96%;
   }
 }
+
+
 
 
 
