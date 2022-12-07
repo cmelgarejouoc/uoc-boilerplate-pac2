@@ -184,29 +184,29 @@
   .site-footer-social-media {
     // Box model
     width: 12rem;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: 4rem;
     padding-top: 2rem;
     padding-bottom: 3rem;
     padding-left: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 4rem;
 
     @media screen and (min-width: 768px) {
       // Box model
-      width: 15%;
       float: left;
-      margin: 0 0 0 0;
+      width: 15%;
       padding-top: 0;
       padding-bottom: 1.5rem;
+      margin: 0 0 0 0;
     }
   }
 
   .social-media-list-item {
     // Box model
     display: inline-block;
-    margin-bottom: 0;
     padding-right: .5rem;
     padding-left: .5rem;
+    margin-bottom: 0;
 
     @media screen and (min-width: 768px) {
         // Box model
@@ -472,10 +472,10 @@
 
      @media screen and (min-width: 768px) {
       // Box model
-      width: 21%;
       float: left;
-      margin: 0;
+      width: 21%;
       padding: 0;
+      margin: 0;
     }
   }
 
@@ -522,9 +522,9 @@
   .site-footer-content-wrapper {
     @media screen and (min-width: 768px) {
       // Box model
-      padding: 2rem 0 0 0;
       display: flex;
       justify-content: space-between;
+      padding: 2rem 0 0 0;
     }
   }
 
@@ -534,19 +534,19 @@
     padding: 2.5rem 2.5rem;
     margin-bottom: 0;
 
-    // Visual
-    background-color: map.get($theme-colors, "main-color");;
-
     // Typography
     font-size: 1.4rem;
     line-height: 1.9;
     color: map.get($theme-colors, "site-invert");
     text-align: center;
 
+    // Visual
+    background-color: map.get($theme-colors, "main-color");
+
     @media screen and (min-width: 768px) {
       // Box model
-      margin-bottom: 0;
       padding: 2rem;
+      margin-bottom: 0;
       clear: both;
     }
   }
@@ -555,21 +555,21 @@
   .site-footer-menu-item {
     // Box model
     display: inline-block;
-    margin-bottom: 0;
     padding-right: .5rem;
     padding-left: .5rem;
+    margin-bottom: 0;
 
     // Typography
     font-weight: 800;
 
     @media screen and (min-width: 768px) {
       // Box model
-      max-width: 24.8rem;
+      display: inline-block;
       width: 23%;
-      margin: 0;
+      max-width: 24.8rem;
       padding-right: 1rem;
       padding-left: 1rem;
-      display: inline-block;
+      margin: 0;
 
       // Typography
       font-size: 1.2rem;
@@ -578,10 +578,13 @@
 
   .site-footer-menu-permalink {
     // Typography
+    font-family: $font-family-sans-serif;
+    font-size: 1.7rem;
     font-weight: 800;
     color: map.get($theme-colors, "site-invert");
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
       @media screen and (min-width: 768px) {
@@ -597,6 +600,20 @@
       // Typography
       color: map.get($theme-colors, "main-color");
     }
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      display: initial;
+      margin: 0;
+
+      // Typography
+      font-size: 1.2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Typography
+      font-size: 1.5rem;
+    }
   }
 
 
@@ -604,18 +621,18 @@
       // Box model
       width: 16.6rem;
       height: auto;
+      padding-left: 0;
       margin-right: auto;
       margin-left: auto;
-      padding-left: 0;
 
       @media screen and (min-width: 768px) {
         // Box model
-        width: 21%;
+        display: initial;
         float: left;
-        margin: 0;
+        width: 21%;
         padding-bottom: 1.5rem;
         padding-left: 4vw;
-        display: initial;
+        margin: 0;
       }
 
       @media screen and (min-width: 1024px) {
@@ -637,34 +654,12 @@
 
     @media screen and (min-width: 768px) {
       // Box model
-      width: 62.6%;
-      float: left;
       display: initial;
-      margin: 0;
+      float: left;
+      width: 62.6%;
       padding-top: .5rem;
       padding-bottom: 2rem;
-    }
-  }
-
-  .site-footer-menu-permalink {
-    // Typography
-    font-family: Montserrat, Arial, sans-serif;
-    font-size: 1.7rem;
-    font-weight: 800;
-    text-transform: uppercase;
-
-    @media screen and (min-width: 768px) {
-      // Box model
       margin: 0;
-      display: initial;
-
-      // Typography
-      font-size: 1.2rem;
-    }
-
-    @media screen and (min-width: 1024px) {
-      // Typography
-      font-size: 1.5rem;
     }
   }
 
@@ -675,9 +670,9 @@
 
     @media screen and (min-width: 768px) {
       // Box model
-      margin: 0 5rem 0 0;
-      padding: 0;
       width: 9rem;
+      padding: 0;
+      margin: 0 5rem 0 0;
     }
 
     @media screen and (min-width: 1024px) {
@@ -717,16 +712,16 @@
   .pre-footer {
     // Box model
     width: 90%;
-    margin: 4.5rem auto;
-    padding: 2rem 2.5rem;
     max-width: 1440px;
+    padding: 2rem 2.5rem;
+    margin: 4.5rem auto;
 
     // Typography
     text-align: center;
 
     // Visual
-    border-radius: 10px;
     background-color: $bckgr;
+    border-radius: 10px;
   }
 
   .pre-footer-text {
@@ -782,8 +777,8 @@
     .site-footer-logo {
       @media screen and (min-width: 768px) {
         // Box model
-        width: 24.4rem;
         float: none;
+        width: 24.4rem;
         padding-bottom: 0;
         padding-left: 5rem;
       }
@@ -797,8 +792,8 @@
 
       @media screen and (min-width: 768px) {
         // Box model
-        width: auto;
         float: none;
+        width: auto;
       }
     }
 
@@ -808,8 +803,8 @@
 
       @media screen and (min-width: 768px) {
         // Box model
-        max-width: 100%;
         width: auto;
+        max-width: 100%;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
       }

@@ -44,9 +44,9 @@
 .form-content {
   // Box model
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding: 1rem 2.3rem 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .form-label {
@@ -63,10 +63,10 @@
 .contacte-image {
   // Box model
   width: 100%;
-  height: 36rem;
   max-width: 760px;
-  margin-left: auto;
+  height: 36rem;
   margin-right: auto;
+  margin-left: auto;
 
   // Visual
   object-fit: cover;
@@ -85,8 +85,4 @@
   // Typography
   font-size: 1.2rem;
   font-weight: 600;
-
-  @media screen and (min-width: 768px) {
-
-  }
 }
