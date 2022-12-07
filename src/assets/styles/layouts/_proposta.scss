@@ -1,26 +1,44 @@
 /**
  *
- * PAC1 - Carles Melgarejo
+ * PAC2 - Carles Melgarejo
  * Estils CSS amb estratègia 'Mobile first'
  *
  * CONTINGUT
  *
  * SETTINGS
- * _variables.scss.................Variables globals.
+ * _variables.scss.................Variables globals
  *
  * GENERIC
- * _header.scss....................Header principal amb logo i menú. 
- *    Hamburger-menu-styles........Contenidor general menú hamburguesa.
- * _footer.scss....................Footer principal de la pàgina.
+ * _common.scss..............................Estils comuns de totes les pàgines
+ *    Global-styles..........................Estils genèrics
+ *    Site header styles.....................Estils de la capçalera comú a totes
+ *                                            les pàgines que conté el menú
+ *    Site footer styles.....................Estils del footer de totes
+ *                                            les pàgines
+ *    Flex & grid support....................Suport per navegadors moderns
  *
- * Global-styles...................Estils genèrics per tota la pàgina.
- * Icones..........................Estils genèrics per les icones.
- * Cites ..........................Estils genèrics de cites.
-
+ * HOME
+ * _home.scss................................Estils de la home
+ *    Flex & grid support....................Suport per navegadors moderns
+ *
+ * MEMBRES
+ * _membres.scss.............................Estils de la pàgina membres
+ *    Flex & grid support....................Suport per navegadors moderns
+ *
+ * PROPOSTA
+ * _proposta.scss............................Estils de la pàgina proposta
+ *    Flex & grid support....................Suport per navegadors moderns
+ *
+ * CONTACTE
+ * _contacte.scss............................Estils de la pàgina de contacte
  *
  * COMPONENTS
- * Site-main-styles................Contingut principal de la pàgina. 
- * Menu-styles.....................Footer principal de la pàgina.
+ * _common.scss
+ *    Hamburger-menu-styles..................Contenidor general menú hamburguesa
+ *    Icones de contacte.....................Contenidor de les icones de contacte
+ *    Pre footer styles......................Estils del prefooter de totes
+ *                                           les pàgines
+ *
  */
 
 .proposta-header {
@@ -127,9 +145,6 @@
   @media screen and (min-width: 768px) {
     // Box model
     margin-bottom: 3rem;
-
-    // Typography
-    font-size: 2rem;
   }
 }
 
@@ -165,11 +180,6 @@
 
   // Visual
   border: none;
-
-  @media screen and (min-width: 768px) {
-    // Typography
-    font-size: 2rem;
-  }
 }
 
 .list-group {
@@ -212,6 +222,12 @@
     width: 96%;
   }
 }
+
+
+
+/*------------------------------------*\
+  #FLEX & GRID SUPPORT
+\*------------------------------------*/
 
 /* GRID SUPPORTED */
 @supports (display: grid) {

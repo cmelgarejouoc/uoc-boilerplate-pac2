@@ -7,6 +7,13 @@
 // import SomeModule from "some-node-module";
 import * as bootstrap from 'bootstrap';
 
+/*
+  Importem la llibreria per manipular dates
+*/
+import date from 'date-and-time';
+
+
+
 /**
  * Write any other JavaScript below
  */
@@ -67,6 +74,7 @@ function windowResizeListener() {
 window.addEventListener("resize", windowResizeListener);
 
 
+
 /**
  * Com que header i footer són comuns a totes les pàgines
  * aplico l'estil active en la pàgina en la que estem amb Vanilla JS
@@ -101,3 +109,16 @@ switch (page) {
     document.querySelector(".js-footer-home").classList.add("active");
     break;
 }
+
+
+
+/**
+ * Formatar la data amb la dependència externa date-and-time
+ */
+
+const unformattedDate = document.querySelector(".js-time").getAttribute('datetime');
+
+const gigDate = new Date(unformattedDate);
+const formattedDate = date.format(gigDate, 'DD/MM/YYYY');
+
+document.querySelector(".js-time").innerHTML = formattedDate;
