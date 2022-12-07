@@ -1,0 +1,36 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+/**
+ * Import variables
+ */
+
+@import "variables";
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+
+@import "layouts/common";
+@import "layouts/home";
+@import "layouts/membres";
+@import "layouts/proposta";
+@import "layouts/contacte";
+
+/**
+ * Do NOT include anything else in this file!
+ */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+  <html lang="ca">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="author" content="Carles Melgarejo Vila">
+      <meta name="description" content="">
+      <meta name="copyright" content="Carles Melgarejo 2022">
+
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      </noscript>
+
+      <link rel="stylesheet" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+
+      <title>Contacte - Three of us</title>
+    </head>
+
+    <body class="contacte">
+      <include src="./views/header.html"></include>
+
+      <main>
+        <section class="contacte-form-wrapper">
+          <h1 class="contacte-title-section">
+            Envian’s un missatge
+          </h1>
+
+          <form class="row g-3 form-content" name="contact" method="POST" data-netlify="true">
+            <div class="col-md-12">
+                <label class="form-label" for="name">Nom <abbr title="Aquest camp és obligatori">*</abbr></label>
+                <input class="form-control form-control-lg" id="name" type="text" name="name" placeholder="Escriu el teu nom" aria-label=".form-control-lg" required="required"/>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label" for="email">Adreça de correu electrònic <abbr title="Aquest camp és obligatori">*</abbr></label>
+                <input class="form-control form-control-lg" id="email" type="email" name="email" placeholder="name@example.com" aria-label=".form-control-lg" pattern="[\w.%+-]+@[\w.-]+\.[a-z A-Z]{2,6}" required="required"/>
+
+                <div class="alert alert-info email-info" role="alert">
+                    Mai compartirem el teu email amb ningú
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">Missatge</label>
+                <textarea class="form-control form-control-lg" name="message" aria-label=".form-control-lg"></textarea>
+            </div>
+
+            <p>
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </p>
+          </form>
+        </section>
+
+        <section class="contacte-image-wrapper">
+            <img class="contacte-image" src="assets/images/foto-general-slide1-1096w.jpg" loading="lazy" width="1096" height="531">
+        </section>
+
+        <section class="pre-footer">
+          <p class="pre-footer-text">
+            Per  més informació contactar per Whatsapp al <a href="tel:+34611111111">611 111 111</a> o envian’s
+            un missatge a través de la <a href="contacte.html">pàgina de contacte</a>
+          </p>
+        </section>
+      </main>
+
+      <include src="./views/footer.html"></include>
+
+      <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+
+      <script type="text/javascript">
+        /*
+        const gallery = document.querySelector('.gallery');
+        const overlay = document.querySelector('.overlay');
+        const overlayImage = document.querySelector('img');
+        const overlayClose = document.querySelector('.close');
+
+        function generateHTML([h, v]) {
+          return `
+            <div class="item h${h} v${v}">
+              <img src="images/${randomNumber(17)}.jpg">
+              <div class="item__overlay">
+                <button>View -></button>
+              </div>
+            </div>
+          `;
+        }
+
+        function randomNumber(limit) {
+          return Math.floor(Math.random() * limit) + 1;
+        }
+
+        function handleClick(e) {
+          const src = e.currentTarget.querySelector('img').src;
+          overlayIMage.src = src;
+          overlay.classList.add('open');
+        }
+
+        function close() {
+          overlay.classList.remove('open');
+        }
+
+        const digits = Array.from({length: 50}, () => [randomNumber(4), randomNumber(4)]);
+
+        //console.log(digits);
+
+        const html = digits.map(generateHTML).join('');
+        gallery.innerHTML = html;
+
+        const items = document.querySelectorAll('.item');
+
+        items.forEach(item => item.addEventListener('click', handleClick));
+
+        overlayClose.addEventListener('click', close);
+        */
+      </script>
+    </body>
+  </html>

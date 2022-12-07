@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+  <html lang="ca">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="author" content="Carles Melgarejo Vila">
+      <meta name="description" content="">
+      <meta name="copyright" content="Carles Melgarejo 2022">
+
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+      </noscript>
+
+      <link rel="stylesheet" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+
+      <title>Membres - Three of us</title>
+    </head>
+
+    <body class="members">
+      <include src="./views/header.html"></include>
+
+      <main class="members-main">
+        <h1 class="members-title-section">
+          Membres de la banda
+        </h1>
+
+        <section class="members-wrapper">
+          <article class="member albert">
+              <picture class="member-picture">
+                  <source media="(min-width: 768px)" srcset="assets/images/albert-446w.jpg">
+                  <img class="picture-image" src="assets/images/albert-945w.jpg" alt="Logo Three of us" width="945" height="798">
+              </picture>
+
+              <h2 class="member-name">Albert Ferrer</h2>
+
+              <h3 class="member-instrument">DRUMS & VOCALS</h3>
+
+              <p class="member-bio">
+                Toca la bateria des de fa més de 30 anys. Ha tocat també el clarinet i ha gravat
+                1 Cds amb el grup de rock progressiu Barrock, amb qui té també temes publicats
+                a Spotify.
+              </p>
+
+              <p class="member-bio collapse" id="collapseAlbert">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non neque quis
+                nisi pretium mollis quis ut nisl. Proin vitae lorem molestie, rutrum neque nec,
+                porta eros. Fusce dignissim eget ligula pharetra placerat. Aliquam erat volutpat.
+              </p>
+
+              <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlbert" aria-expanded="false" aria-controls="collapseAlbert">
+                Més info
+              </button>
+          </article>
+
+          <article class="member xavi">
+              <picture class="member-picture">
+                  <source media="(min-width: 768px)" srcset="assets/images/xavi-446w.jpg">
+                  <img class="picture-image" src="assets/images/xavi-945w.jpg" alt="Logo Three of us" width="945" height="798">
+              </picture>
+
+              <h2 class="member-name">Xavi Oró</h2>
+
+              <h3 class="member-instrument">BASS & VOCALS</h3>
+
+              <p class="member-bio">
+                Toca la guitarra i el baix des de fa més de 30 anys. Llicenciat per l’ESMUC, ha
+                gravat 4 Cds amb grups com Barrock, Tradivàrius i Duran&Cia i ha composat diverses
+                bandes sonores per films, documentals, etc.
+              </p>
+
+              <p class="member-bio collapse" id="collapseXavi">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non neque quis
+                nisi pretium mollis quis ut nisl. Proin vitae lorem molestie, rutrum neque nec,
+                porta eros. Fusce dignissim eget ligula pharetra placerat. Aliquam erat volutpat.
+              </p>
+
+              <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseXavi" aria-expanded="false" aria-controls="collapseXavi">
+                Més info
+              </button>
+          </article>
+
+          <article class="member carles">
+              <picture class="member-picture">
+                  <source media="(min-width: 768px)" srcset="assets/images/carles-446w.jpg">
+                  <img class="picture-image" src="assets/images/carles-945w.jpg" alt="Logo Three of us" width="945" height="798">
+              </picture>
+
+              <h2 class="member-name">Carles Melgarejo</h2>
+
+              <h3 class="member-instrument">GUITARS & VOCALS</h3>
+
+              <p class="member-bio">
+                Toca la guitarra i l’harmònica des de fa més de 30 anys. Ha tocat també la mandolina
+                i el baix i ha gravat 4 Cds amb grups com Barrock, Tradivàrius i Duran&Cia.
+              </p>
+
+              <p class="member-bio collapse" id="collapseCarles">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non neque quis
+                nisi pretium mollis quis ut nisl. Proin vitae lorem molestie, rutrum neque nec,
+                porta eros. Fusce dignissim eget ligula pharetra placerat. Aliquam erat volutpat.
+              </p>
+
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCarles" aria-expanded="false" aria-controls="collapseCarles">
+                Més info
+              </button>
+          </article>
+        </section>
+
+        <section class="pre-footer members-pre-footer">
+          <p class="pre-footer-text">
+            Per  més informació contactar per Whatsapp al <a href="tel:+34611111111"></a>611 111 111 o envian’s
+            un missatge a través de la <a href="contacte.html">pàgina de contacte</a>
+          </p>
+        </section>
+      </main>
+
+      <include src="./views/footer.html"></include>
+
+      <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    </body>
+  </html>

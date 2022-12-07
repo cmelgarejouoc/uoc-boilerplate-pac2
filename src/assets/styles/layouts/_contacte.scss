@@ -1,0 +1,92 @@
+/**
+ *
+ * PAC1 - Carles Melgarejo
+ * Estils CSS amb estratègia 'Mobile first'
+ *
+ * CONTINGUT
+ *
+ * SETTINGS
+ * _variables.scss.................Variables globals.
+ *
+ * GENERIC
+ * _header.scss....................Header principal amb logo i menú. 
+ *    Hamburger-menu-styles........Contenidor general menú hamburguesa.
+ * _footer.scss....................Footer principal de la pàgina.
+ *
+ * Global-styles...................Estils genèrics per tota la pàgina.
+ * Icones..........................Estils genèrics per les icones.
+ * Cites ..........................Estils genèrics de cites.
+
+ *
+ * COMPONENTS
+ * Site-main-styles................Contingut principal de la pàgina. 
+ * Menu-styles.....................Footer principal de la pàgina.
+ */
+
+.contacte-form-wrapper {
+  // Box model
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacte-title-section {
+  // Box model
+  padding: 3rem 2.3rem 1rem 2.3rem;
+
+  // Typography
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #FFA34F;
+  text-align: left;
+}
+
+
+.form-content {
+  // Box model
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2.3rem 1rem;
+}
+
+.form-label {
+  // Box model
+  width: 100%;
+}
+
+.form-label,
+.form-control {
+  // Typography
+  font-size: 1.6rem;
+}
+
+.contacte-image {
+  // Box model
+  width: 100%;
+  height: 36rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Visual
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    // Box model
+    width: 76rem;
+    height: auto;
+
+    // Visual
+    object-fit: inherit;
+  }
+}
+
+.email-info {
+  // Typography
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  @media screen and (min-width: 768px) {
+
+  }
+}

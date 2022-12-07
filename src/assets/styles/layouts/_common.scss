@@ -1,0 +1,857 @@
+@use "sass:map";
+
+/*------------------------------------*\
+  #GLOBAL-STYLES
+\*------------------------------------*/
+
+  * {
+    // Box model
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+  html,
+  body {
+    // Typography
+    font-family: $font-family-sans-serif;
+    font-size: 2.4vw;
+    color: map.get($theme-colors, "main-color");
+
+    @media screen and (min-width: 768px) {
+      // Typography
+      font-size: 1.2vw;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Typography
+      font-size: .8vw;
+    }
+
+    @media screen and (min-width: 1440px) {
+      // Typography
+      font-size: 10px;
+    }
+  }
+
+
+  body {
+    // Misc
+    cursor: initial;
+  }
+
+
+  h1 {
+    // Box model
+    padding: 6rem 2rem 6rem 2rem;
+
+    // Typography
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: map.get($theme-colors, "secondary-color");
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      margin: 0 auto;
+
+      // Typography
+      font-size: 4.4rem;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+  }
+
+
+  h2 {
+    // Box model
+    margin-bottom: 2rem;
+    
+    // Typography
+    font-size: 2.2rem;
+    color: map.get($theme-colors, "secondary-color");
+  }
+
+
+  a {
+    // Typography
+    color: map.get($theme-colors, "main-color");
+
+    &:hover {
+      // Typography
+      color: inherit;
+
+      // Visual
+      opacity: .7;
+    }
+  }
+
+
+  abbr {
+    // Typography
+    text-decoration: none;
+  }
+
+
+  ul {
+    // Visual
+    list-style: none;
+  }
+
+
+  img {
+    // Box model
+    display: block;
+    max-width: 100%;
+  }
+
+
+  picture {
+    // Box model
+    display: block;
+  }
+
+  .picture-image {
+    // Box model
+    width: 100%;
+    height: auto;
+  }
+
+  p,
+  li,
+  cite {
+    // Box model
+    margin-bottom: 2.4rem;
+
+    // Typography
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: map.get($theme-colors, "main-color");
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      margin-bottom: 1.4rem;
+
+      // Typography
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+  }
+
+
+  i {
+    // Typography
+    font-style: initial;
+  }
+
+  blockquote {
+    // Box model
+    margin-bottom: 2.4rem;
+
+    // Typography
+    font-size: 2.4rem;
+  }
+
+  main {
+    clear: both;
+  }
+
+
+
+  .header-content-wrapper,
+  .site-footer-content-wrapper {
+    // Box model
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+
+  .header-menu-permalink.active,
+  .site-footer-menu-permalink.active {
+    // Typography
+    text-decoration: underline;
+  }
+
+
+  /**
+    * Contenidor de les icones de contacte
+    */
+
+  .header-social-media,
+  .site-footer-social-media {
+    // Box model
+    width: 12rem;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    padding-left: 0;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      width: 15%;
+      float: left;
+      margin: 0 0 0 0;
+      padding-top: 0;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  .social-media-list-item {
+    // Box model
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: .5rem;
+    padding-left: .5rem;
+
+    @media screen and (min-width: 768px) {
+        // Box model
+        margin-right: 0;
+    }
+  }
+
+  .social-media-permalink {
+    // Box model
+    display: block;
+  }
+
+
+
+/*------------------------------------*\
+  #HAMBURGER-MENU-STYLES
+\*------------------------------------*/
+
+  /**
+    * Menú hamburguesa. Aquí només definim el contenidor general i
+    * les dues icones per accedir i tancar el menú.
+    *
+    * 1. Icona per obrir el menú
+    * 2. Icona per tancar el menú
+    */
+
+  .hamburger-menu {
+    // Positioning
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @media screen and (min-width: 768px) {
+      // Positioning
+      position: initial;
+
+      // Box model
+      float: right;
+    }
+  }
+
+  .hamburger {
+    // Positioning
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    // Box model
+    display: none;
+    padding: 2rem 2rem 1.4rem 1.4rem;
+
+    // Typography
+    font-size: 3rem;
+    font-weight: 700;
+    color: map.get($theme-colors, "site-invert");
+    text-decoration: none;
+  }
+
+    .hamburger__open { /* [1] */
+      // Box model
+      display: block;
+
+      @media screen and (min-width: 768px) {
+        // Box model
+        display: none;
+      }
+    }
+
+    .hamburger__close { /* [2] */
+      // Positioning
+      left: 5px;
+    }
+
+
+
+/*------------------------------------*\
+  #MENU-STYLES
+\*------------------------------------*/
+
+  /**
+    * Menú fet amb llistes desordenades ul.
+    *
+    * 1. Elements de menú
+    */
+
+  .navigation-content {
+    // Positioning
+    position: absolute;
+    top: 19.9vw;
+    left: 0;
+
+    // Box model
+    width: 0;
+
+    // Visual
+    overflow: hidden;
+    background-color: map.get($theme-colors, "main-color");
+    transition: .5s;
+
+    @media screen and (min-width: 768px) {
+      // Positioning
+      position: initial;
+
+      // Box model
+      width: 100%;
+      height: auto;
+      background-color: map.get($theme-colors, "main-color");
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Box model
+      padding-top: 1rem;
+    }
+  }
+
+  .header-menu-content {
+    // Box model
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 5rem;
+
+    // Visual
+    background-color: map.get($theme-colors, "other-color");
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      height: auto;
+      padding: 0;
+      margin: 0;
+
+      // Typography
+      text-align: center;
+
+      // Visual
+      background-color: map.get($theme-colors, "main-color");
+    }
+  }
+
+  .header-menu-content-item { /* [1] */
+    // Box model
+    display: block;
+    padding-top: 1.2rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      display: inline-block;
+      padding-top: 0;
+      padding-right: 1.4rem;
+      padding-bottom: 0;
+      padding-left: 1.4rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Box model
+      display: initial;
+    }
+  }
+
+  .header-menu-permalink {
+    // Typography
+    font-family: $font-family-sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1;
+    color: map.get($theme-colors, "site-invert");
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      @media screen and (min-width: 768px) {
+        // Typography
+        color: map.get($theme-colors, "secondary-color");
+        text-decoration: underline;
+
+        // Misc
+        cursor: pointer;
+      }
+    }
+
+    &.active {
+      // Typography
+      color: map.get($theme-colors, "secondary-color");
+    }
+
+    @media screen and (min-width: 768px) {
+      // Typography
+      font-size: 1.2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Typography
+      font-size: 1.5rem;
+    }
+  }
+
+  .header-menu-home-link {
+    @media screen and (min-width: 768px) {
+      // Box model
+      display: none;
+    }
+  }
+
+/*------------------------------------*\
+  #SITE-HEADER-STYLES
+\*------------------------------------*/
+
+  .site-header {
+    // Positioning
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    // Box model
+    height: 20vw;
+    padding-top: 2.7rem;
+    padding-bottom: 0;
+
+    // Visual
+    visibility: visible;
+    background-color: map.get($theme-colors, "main-color");
+    box-shadow: 0 3px 16px rgb(74 74 74 / .2);
+    opacity: 1;
+    transition: opacity .5s linear;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      float: left;
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+  }
+
+  .header-content-wrapper {
+    @media screen and (min-width: 768px) {
+      // Box model
+      width: 100%;
+      height: 6rem;
+      padding: 2rem 4rem 1.4rem 5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Box model
+      height: 7rem;
+    }
+  }
+
+  .logo-wrapper {
+    // Box model
+    display: block;
+    width: max-content;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    // Typography
+    text-align: center;
+    text-decoration: none;
+
+     @media screen and (min-width: 768px) {
+      // Box model
+      width: 21%;
+      float: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .logo-wrapper-image {
+    // Box model
+    width: 23.4rem;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+     @media screen and (min-width: 768px) {
+      // Box model
+      width: 19.4rem;
+    }
+
+     @media screen and (min-width: 1024px) {
+      // Box model
+      width: 23.4rem;
+    }
+  }
+
+
+
+/*------------------------------------*\
+  #SITE-FOOTER-STYLES
+\*------------------------------------*/
+
+  .site-footer {
+    // Box model
+    padding-top: 3rem;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    // Visual
+    background-color: map.get($theme-colors, "secondary-color");
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      padding: 0;
+    }
+  }
+
+  .site-footer-content-wrapper {
+    @media screen and (min-width: 768px) {
+      // Box model
+      padding: 2rem 0 0 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .site-footer-content-text {
+    // Box model
+    width: 100%;
+    padding: 2.5rem 2.5rem;
+    margin-bottom: 0;
+
+    // Visual
+    background-color: map.get($theme-colors, "main-color");;
+
+    // Typography
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: map.get($theme-colors, "site-invert");
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      margin-bottom: 0;
+      padding: 2rem;
+      clear: both;
+    }
+  }
+
+
+  .site-footer-menu-item {
+    // Box model
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: .5rem;
+    padding-left: .5rem;
+
+    // Typography
+    font-weight: 800;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      max-width: 24.8rem;
+      width: 23%;
+      margin: 0;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      display: inline-block;
+
+      // Typography
+      font-size: 1.2rem;
+    }
+  }
+
+  .site-footer-menu-permalink {
+    // Typography
+    font-weight: 800;
+    color: map.get($theme-colors, "site-invert");
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      @media screen and (min-width: 768px) {
+        // Typography
+        color: map.get($theme-colors, "main-color");
+        text-decoration: underline;
+
+        // Misc
+        cursor: pointer;
+      }
+    }
+    &.active {
+      // Typography
+      color: map.get($theme-colors, "main-color");
+    }
+  }
+
+
+  .site-footer-logo {
+      // Box model
+      width: 16.6rem;
+      height: auto;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+
+      @media screen and (min-width: 768px) {
+        // Box model
+        width: 21%;
+        float: left;
+        margin: 0;
+        padding-bottom: 1.5rem;
+        padding-left: 4vw;
+        display: initial;
+      }
+
+      @media screen and (min-width: 1024px) {
+        // Box model
+        width: 28.4rem;
+      }
+  }
+
+
+  .site-footer-menu-content {
+    // Box model
+    width: 100%;
+    max-width: 62rem;
+    padding-left: 0;
+    margin-top: 3rem;
+
+    // Typography
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      width: 62.6%;
+      float: left;
+      display: initial;
+      margin: 0;
+      padding-top: .5rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .site-footer-menu-permalink {
+    // Typography
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      margin: 0;
+      display: initial;
+
+      // Typography
+      font-size: 1.2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Typography
+      font-size: 1.5rem;
+    }
+  }
+
+
+  .site-footer-social-media {
+    // Box model
+    margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      margin: 0 5rem 0 0;
+      padding: 0;
+      width: 9rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Box model
+      width: 11rem;
+    }
+  }
+
+
+  /**
+    * Com que l'icona de Linkedin i del correu apareixen tant al menú
+    * com al footer ho poso aquí, com a definició més genèrica.
+    */
+
+  .fa-brands {
+    // Typography
+    font-size: 4.2rem;
+    color: map.get($theme-colors, "site-invert");
+
+    @media screen and (min-width: 768px) {
+      // Typography
+      font-size: 2.8rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Typography
+      font-size: 3.2rem;
+    }
+  }
+
+
+
+/*------------------------------------*\
+  #PRE-FOOTER-STYLES
+\*------------------------------------*/
+
+  .pre-footer {
+    // Box model
+    width: 90%;
+    margin: 4.5rem auto;
+    padding: 2rem 2.5rem;
+    max-width: 1440px;
+
+    // Typography
+    text-align: center;
+
+    // Visual
+    border-radius: 10px;
+    background-color: $bckgr;
+  }
+
+  .pre-footer-text {
+    // Box model
+    margin-bottom: 0;
+
+    // Typography
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      max-width: 83rem;
+      margin-top: 0;
+      margin-right: auto;
+      margin-left: auto;
+
+      // Typography
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+  }
+
+
+
+/*------------------------------------*\
+  #FLEX & GRID SUPPORT
+\*------------------------------------*/
+
+  /* FLEX SUPPORTED */
+  @supports (display: flex) {
+    .site-header {
+      @media screen and (min-width: 768px) {
+        // Box model
+        float: none;
+      }
+    }
+
+    .header-content-wrapper {
+      @media screen and (min-width: 768px) {
+        // Box model
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .logo-wrapper,
+    .hamburger-menu {
+      // Box model
+      float: none;
+    }
+
+    .site-footer-logo {
+      @media screen and (min-width: 768px) {
+        // Box model
+        width: 24.4rem;
+        float: none;
+        padding-bottom: 0;
+        padding-left: 5rem;
+      }
+    }
+
+    .site-footer-menu-content {
+      // Box model
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @media screen and (min-width: 768px) {
+        // Box model
+        width: auto;
+        float: none;
+      }
+    }
+
+    .site-footer-menu-item {
+      // Box model
+      display: initial;
+
+      @media screen and (min-width: 768px) {
+        // Box model
+        max-width: 100%;
+        width: auto;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  /* GRID SUPPORTED */
+  @supports (display: grid) {
+    .header-social-media,
+    .site-footer-social-media {
+      // Box model
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @media screen and (min-width: 768px) {
+        // Box model
+        float: none;
+      }
+    }
+
+    .social-media-list-item {
+      // Box model
+      display: initial;
+    }
+
+    .site-footer-social-media {
+      @media screen and (min-width: 768px) {
+        // Box model
+        width: 8rem;
+      }
+    }
+  }
+
+
+
+/**
+  * Amagar la home del menu a desktop
+  */
+
+.header-social-media {
+  @media screen and (min-width: 768px) {
+    // Box model
+    display: none;
+  }
+}

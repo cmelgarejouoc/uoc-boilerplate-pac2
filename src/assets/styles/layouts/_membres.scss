@@ -1,0 +1,158 @@
+@use "sass:map";
+
+/**
+ *
+ * PAC1 - Carles Melgarejo
+ * Estils CSS amb estratègia 'Mobile first'
+ *
+ * CONTINGUT
+ *
+ * SETTINGS
+ * _variables.scss.................Variables globals.
+ *
+ * GENERIC
+ * _header.scss....................Header principal amb logo i menú. 
+ *    Hamburger-menu-styles........Contenidor general menú hamburguesa.
+ * _footer.scss....................Footer principal de la pàgina.
+ *
+ * Global-styles...................Estils genèrics per tota la pàgina.
+ * Icones..........................Estils genèrics per les icones.
+ * Cites ..........................Estils genèrics de cites.
+
+ *
+ * COMPONENTS
+ * Site-main-styles................Contingut principal de la pàgina. 
+ * Menu-styles.....................Footer principal de la pàgina.
+ */
+
+.members-main {
+  // Box model
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.members-title-section {
+  // Box model
+  margin-bottom: 1rem;
+  padding: 3rem 3rem 1rem 3rem;
+
+  // Typography
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: map.get($theme-colors, "other-color");
+  text-align: center;
+  line-height: 1.2;
+}
+
+.members-wrapper {
+  // Box model
+  display: block;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  @media screen and (min-width: 768px) {
+    // Box model
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+  }
+}
+
+.member {
+  // Typography
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    // Box model
+    float: left;
+    width: 33.33%;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+}
+
+.member-picture {
+  // Box model
+  margin-bottom: 2rem;
+}
+
+.member-name {
+  // Box model
+  margin-bottom: 0.5rem;
+
+  // Typography
+  font-size: 2rem;
+  font-weight: 600;
+  color: map.get($theme-colors, "secondary-color");
+}
+
+.member-instrument {
+  // Typography
+  font-size: 1.2rem;
+  color: map.get($theme-colors, "secondary-color");
+}
+
+.member-bio {
+  // Box model
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  max-width: 47rem;
+
+  // Typography
+  font-size: 1.6rem;
+}
+
+.btn-primary {
+  // Box model
+  margin-bottom: 5rem;
+
+  // Typography
+  font-size: 2rem;
+  font-weight: 600;
+  color: map.get($theme-colors, "site-invert");
+
+  &:hover {
+    // Typography
+    color: map.get($theme-colors, "site-invert");
+
+    // Visual
+    opacity: .7;
+  }
+}
+
+.members-pre-footer {
+  @media screen and (min-width: 768px) {
+    // Box model
+    width: 96%;
+    clear: both;
+  }
+}
+
+/* FLEX SUPPORTED */
+@supports (display: flex) {
+  .members-wrapper {
+    // Box model
+    display: flex;
+    flex-direction: column;
+
+
+    @media screen and (min-width: 768px) {
+      // Box model
+      flex-direction: row;
+      justify-content: space-between;
+      column-gap: 2rem;
+    }
+  }
+
+  .member {
+    @media screen and (min-width: 768px) {
+      // Box model
+      float: none;
+      width: auto;
+      padding-left: initial;
+      padding-right: initial;
+    }
+  }
+}

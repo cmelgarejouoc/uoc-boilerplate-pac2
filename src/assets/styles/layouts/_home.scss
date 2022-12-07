@@ -1,0 +1,334 @@
+@use "sass:map";
+
+/**
+ *
+ * PAC1 - Carles Melgarejo
+ * Estils CSS amb estratègia 'Mobile first'
+ *
+ * CONTINGUT
+ *
+ * SETTINGS
+ * _variables.scss.................Variables globals.
+ *
+ * GENERIC
+ * _header.scss....................Header principal amb logo i menú. 
+ *    Hamburger-menu-styles........Contenidor general menú hamburguesa.
+ * _footer.scss....................Footer principal de la pàgina.
+ *
+ * Global-styles...................Estils genèrics per tota la pàgina.
+ * Icones..........................Estils genèrics per les icones.
+ * Cites ..........................Estils genèrics de cites.
+
+ *
+ * COMPONENTS
+ * Site-main-styles................Contingut principal de la pàgina. 
+ * Menu-styles.....................Footer principal de la pàgina.
+ */
+
+.home-poster {
+  // Positioning
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    // Box model
+    width: 90%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.home-title-section {
+  // Box model
+  padding: 3rem 2.3rem 1rem 2.3rem;
+
+  // Typography
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: map.get($theme-colors, "other-color");
+  text-align: left;
+
+}
+
+.home-subtitle-section {
+  // Box model
+  padding: 0 2.3rem 0 2.3rem;
+  margin-bottom: .8rem;
+
+  // Typography
+  font-weight: 600;
+  color: map.get($theme-colors, "main-color");
+}
+
+.home-poster-text {
+  // Box model
+  margin-bottom: .8rem;
+  padding: 0 2.3rem 0 2.3rem;
+
+  // Typography
+  font-size: 1.6rem;
+}
+
+.home-more-info-line {
+  // Box model
+  width: 2.9rem;
+  margin: 0 0 .3rem 2.3rem;
+
+  // Visual
+  border-top: 3px solid map.get($theme-colors, "secondary-color");
+  opacity: 1;
+}
+
+.home-more-info {
+  // Box model
+  display: block;
+  margin-bottom: 3rem;
+  padding: 0 2.3rem 0 2.3rem;
+
+  // Typography
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: map.get($theme-colors, "main-color");
+  text-decoration: none;
+}
+
+.home-etiqueta-properes {
+  // Box model
+  width: 50%;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+
+  // Visual
+  background-color: map.get($theme-colors, "secondary-color");
+}
+
+.home-etiqueta-properes-text {
+  // Box model
+  margin-bottom: 0;
+
+  // Typography
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.home-etiqueta-data {
+  // Positioning
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  // Box model
+  width: 50%;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.home-etiqueta-data-text {
+  // Box model
+  margin-bottom: 0;
+
+  // Typography
+  font-weight: 700;
+  color: map.get($theme-colors, "main-color");
+  text-align: center;
+}
+
+
+
+/*------------------------------------*\
+  #FLEX & GRID SUPPORT
+\*------------------------------------*/
+
+/* GRID SUPPORTED */
+@supports (display: grid) {
+  .home-poster {
+    @media screen and (min-width: 768px) {
+      // Box model
+      display: grid;
+      grid-template-rows: 20vh 25vh 27vh 10vh;
+      grid-template-columns: minmax(20em, max-content) minmax(20em, max-content) 2fr minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+      width: 100%;
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .home-title-section {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-column: 3 / 6;
+      grid-row: 1 / 2;
+      z-index: 1;
+      justify-self: end;
+      max-width: 39rem;
+      padding-top: 1rem;
+      padding-right: 2.3rem;
+      padding-bottom: 1rem;
+      padding-left: 4.3rem;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+
+      // Typography
+      font-size: 4.5rem;
+      line-height: 1.2;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Box model
+      grid-column: 3 / 5;
+      grid-row: 2 / 3;
+      max-width: 42rem;
+      padding-top: 0;
+
+      // Typography
+      font-size: 4.6rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+      // Box model
+      max-width: 48rem;
+
+      // Typography
+      font-size: 5rem;
+    }
+  }
+
+  .home-subtitle-section {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-row: 1 / -1;
+      grid-column: 6 / 7;
+      writing-mode: vertical-rl;
+      padding: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  .home-poster-text {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-column: 4 / 6;
+      grid-row: 2 / 3;
+      z-index: 1;
+      max-width: 44rem;
+      padding-top: 8rem;
+      padding-right: 0;
+      padding-left: 3rem;
+      margin-left: 0;
+
+      // Typography
+      font-size: 1.4rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      // Box model
+      grid-column: 4 / 6;
+      grid-row: 3 / 4;
+      padding-top: 0;
+
+      // Typography
+      font-size: 1.5rem;
+    }
+
+    @media screen and (min-width: 1400px) {
+      // Typography
+      font-size: 1.6rem;
+    }
+  }
+
+  .home-more-info-line {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-column: 5 / 6;
+      grid-row: 4 / 5;
+      z-index: 2;
+      justify-self: end;
+      align-self: self-end;
+      margin-right: 9rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .home-more-info {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-column: 5 / 6;
+      grid-row: 4 / 5;
+      z-index: 2;
+      justify-self: end;
+      align-self: self-end;
+      padding-top: .8rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .home-picture {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-column: 1 / 4;
+      grid-row: 1 / 5;
+    }
+  }
+
+  .home-picture-image {
+    @media screen and (min-width: 768px) {
+      // Box model
+      width: 100%;
+      height: 100%;
+
+      // Visual
+      object-fit: cover;
+    }
+  }
+
+  .home-etiqueta-properes {
+    @media screen and (min-width: 768px) {
+      // Box model
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      z-index: 2;
+      width: 100%;
+      padding-top: 1.4rem;
+      padding-bottom: 1.4rem;
+
+      // Visual
+      background-color: map.get($theme-colors, "secondary-color");
+    }
+  }
+
+  .home-etiqueta-properes-text {
+    @media screen and (min-width: 768px) {
+      // Typography
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+  }
+
+  .home-etiqueta-data {
+    @media screen and (min-width: 768px) {
+      // Positioning
+      position: inherit;
+
+      // Box model
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      z-index: 1;
+      width: 100%;
+
+      // Visual
+      background-color: map.get($theme-colors, "site-invert");
+    }
+  }
+
+  .home-etiqueta-data-text {
+    @media screen and (min-width: 768px) {
+      // Typography
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+  }
+}
