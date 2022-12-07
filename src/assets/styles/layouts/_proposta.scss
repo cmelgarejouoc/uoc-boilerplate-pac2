@@ -1,45 +1,6 @@
-/**
- *
- * PAC2 - Carles Melgarejo
- * Estils CSS amb estratègia 'Mobile first'
- *
- * CONTINGUT
- *
- * SETTINGS
- * _variables.scss.................Variables globals
- *
- * GENERIC
- * _common.scss..............................Estils comuns de totes les pàgines
- *    Global-styles..........................Estils genèrics
- *    Site header styles.....................Estils de la capçalera comú a totes
- *                                            les pàgines que conté el menú
- *    Site footer styles.....................Estils del footer de totes
- *                                            les pàgines
- *    Flex & grid support....................Suport per navegadors moderns
- *
- * HOME
- * _home.scss................................Estils de la home
- *    Flex & grid support....................Suport per navegadors moderns
- *
- * MEMBRES
- * _membres.scss.............................Estils de la pàgina membres
- *    Flex & grid support....................Suport per navegadors moderns
- *
- * PROPOSTA
- * _proposta.scss............................Estils de la pàgina proposta
- *    Flex & grid support....................Suport per navegadors moderns
- *
- * CONTACTE
- * _contacte.scss............................Estils de la pàgina de contacte
- *
- * COMPONENTS
- * _common.scss
- *    Hamburger-menu-styles..................Contenidor general menú hamburguesa
- *    Icones de contacte.....................Contenidor de les icones de contacte
- *    Pre footer styles......................Estils del prefooter de totes
- *                                           les pàgines
- *
- */
+/*------------------------------------*\
+  #PROPOSTA-STYLES
+\*------------------------------------*/
 
 .proposta-header {
   // Positioning
