@@ -35,7 +35,7 @@
 
 Disseny: https://www.figma.com/file/vAw5kGPHOB72AHPYRiMFTz/PAC2?node-id=2%3A6&t=OOq4oXodqHru13L7-1
 
-URL web pública (deployment a Netlify):
+URL web pública (deployment a Netlify): https://main--amazing-sorbet-9fcb1b.netlify.app/
 
 
 
